@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dār Studio — Ines Mathlouthi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Quintessential&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+ 
+<header>
+  <div class="header-left">
+    <span class="site-title" onclick="showSection('home')">Dār Studio</span>
+    <span class="site-subtitle">by Ines Mathlouthi</span>
+  </div>
+  <nav>
+    <a onclick="showSection('projets')" id="nav-projets">Projets</a>
+    <a onclick="showSection('galerie')" id="nav-galerie">Galerie</a>
+    <a onclick="showSection('creations')" id="nav-creations">Créations</a>
+    <a onclick="showSection('experience')" id="nav-experience">Expérience</a>
+    <a onclick="showSection('apropos')" id="nav-apropos">À propos</a>
+    <a onclick="showSection('contact')" id="nav-contact">Contact</a>
+  </nav>
+</header>
+ 
+<div id="section-home" class="section active hero-section">
+ 
+  <div class="hero-bg-image"></div>
+ 
+  <div class="hero">
+    <p class="hero-label">Portfolio — 2026</p>
+    <h1 class="hero-title">
+      <span class="hero-title-inner">Portfolio</span>
+    </h1>
+    <p class="hero-intro">Bienvenue dans mon univers créatif. Je suis Ines Mathlouthi, étudiante en architecture et je vous présente "Dār Studio" —     mon portofolio numérique.</p>
+    <div class="hero-scroll">Défiler</div>
+  </div>
+</div>
+ 
+<div id="section-projets" class="section">
+  <div class="section-header">
+    <h2>Projets</h2>
+    <p>Sélection de travaux — 2022–2026</p>
+  </div>
+  <div class="projects-grid">
+    <div class="project-card" onclick="window.location.href='projet1.html'">
+       <img src="s4 projet.png" class="project-bg">
+       <div class="overlay">
+        <div class="project-card-label">semestre 4</div>
+        <div class="project-card-title">Centre communautaire, Marseille</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="logement mars.png" class="project-bg">
+      <div class="overlay">
+        <div class="project-card-label">semestre 5</div>
+        <div class="project-card-title">Logement collectif, Marseille</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="kadikoy 1.png" class="project-bg">
+      <div class="overlay">
+        <div class="project-card-label">semestre 7</div>
+        <div class="project-card-title">Centre culturel, Kadikoy</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-card-label">semestre 8</div>
+        <div class="project-card-title">à venir</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-card-label">semestre 9</div>
+        <div class="project-card-title">à venir</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div>
+        <div class="project-card-label">semestre 10</div>
+        <div class="project-card-title">à venir</div>
+      </div>
+    </div>
+    <div class="project-card"></div>
+    <div class="project-card"></div>
+    <div class="project-card"></div>
+  </div>
+</div>
+ 
+<div id="section-galerie" class="section">
+  <div class="section-header">
+    <h2>Galerie</h2>
+    <p>Photographies & visuels</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="kairouan.jpg"></div>
+    <div class="gallery-item"><img src="musée.jpg"></div>
+    <div class="gallery-item"><img src="mars.PNG"></div>
+    <div class="gallery-item"><img src="hajji.jpg"></div>
+    <div class="gallery-item"><img src="casa.JPG"></div>
+    <div class="gallery-item"><img src="jian.jpg"></div>
+    <div class="gallery-item"><img src="amour.jpg"></div>
+    <div class="gallery-item"><img src="mecca.jpg"></div>
+    <div class="gallery-item"><img src="china.JPG"></div>
+    <div class="gallery-item"><img src="shanghai.JPG"></div>
+    <div class="gallery-item"><img src="zaha hadid.JPG"></div>
+    <div class="gallery-item"><img src="sancaklar.jpg"></div>
+    <div class="gallery-item"><img src="citernes.JPG"></div>
+    <div class="gallery-item"><img src="cimetiere it.jpg"></div>
+    <div class="gallery-item"><img src="maroc.jpg"></div>
+  </div>
+</div>
+ 
+<div id="section-creations" class="section">
+  <div class="section-header">
+    <h2>Créations</h2>
+    <p>Travaux expérimentaux & compétences extra</p>
+  </div>
+  <div class="creations-list">
+    <div class="creation-item" onclick="toggleCreation('c1')">
+      <span class="creation-num">01</span>
+      <span class="creation-title">Fragments d'un quartier</span>
+      <span class="creation-tag">Film expérimental</span>
+    </div>
+    <div id="c1" class="creation-content">
+      <p>Le film : Le Panier, Marseille
+semestre 4 - 2024
+Dans le cadre d’un projet en arts plastiques, nous avons réalisé un
+court-métrage retraçant l’histoire du quartier du Panier à
+Marseille, en explorant comment les espaces urbains ont été occupés
+à travers les époques. Ce travail illustre les transformations sociales,
+culturelles et architecturales d’un lieu emblématique, en mettant
+l’accent sur la relation entre une personne et son environnement.</p>
+      
+      <video controls src="video art longue.mov"></video>
+    </div>
+    <div class="creation-item" onclick="toggleCreation('c2')">
+      <span class="creation-num">02</span>
+      <span class="creation-title">Un peu d'art</span>
+      <span class="creation-tag">Peinture</span>
+    </div>
+    <div id="c2" class="creation-content">
+      <p>Portrait du docteur Félinet, 2021. Inspiré du Portrait du docteur Gachet, Van Gogh - peinture acrylique.</p>
+      <img src="peinture.jpg">
+    </div>
+    <div class="creation-item" onclick="toggleCreation('c3')">
+      <span class="creation-num">03</span>
+      <span class="creation-title">Compositions visuelles</span>
+      <span class="creation-tag">Collages numériques</span>
+    </div>
+    <div id="c3" class="creation-content">
+      <p>Collages numériques et recherches graphiques.</p>
+      <img src="collage.png">
+    </div>
+    <div class="creation-item" onclick="toggleCreation('c4')">
+      <span class="creation-num">04</span>
+      <span class="creation-title">Savoir-faire d'ailleurs</span>
+      <span class="creation-tag">Mosaïques ottomanes</span>
+    </div>
+    <div id="c4" class="creation-content">
+      <p>Exploration des motifs et de l'ornementation ottomane. (EN COURS)</p>
+      <img src="mosaique.jpg">
+    </div>
+    <div class="creation-item" onclick="toggleCreation('c5')">
+      <span class="creation-num">05</span>
+      <span class="creation-title">Artisanat textile</span>
+      <span class="creation-tag">Tapis et motifs</span>
+    </div>
+    <div id="c5" class="creation-content">
+      <p>Travail autour des textures, tapis et motifs textiles. (EN COURS)</p>
+      <img src="tapis.jpg">
+    </div>
+  </div>
+</div>
+ 
+<div id="section-experience" class="section">
+  <div class="section-header">
+    <h2>Expérience</h2>
+    <p>Parcours professionnel</p>
+  </div>
+  <div class="exp-list">
+    <div class="exp-item">
+      <span class="exp-date">2024</span>
+      <div>
+        <div class="exp-role">Stagiaire Assistante Architecte</div>
+        <div class="exp-company">MZ Architecture</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <span class="exp-date">2022</span>
+      <div>
+        <div class="exp-role">Stage ouvrier en Restauration de Patrimoine</div>
+        <div class="exp-company">Les Compagnons de Castellane</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <span class="exp-date">2021 — présent</span>
+      <div>
+        <div class="exp-role">Formation / Diplôme</div>
+        <div class="exp-company">ENSA Marseille - Institut Méditerranéen de la Ville et des Territoires (IMVT)</div>
+        <div class="exp-company">Diplôme d'Études en Architecture (DEEA) obtenu en 2025</div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<div id="section-apropos" class="section">
+  <div class="section-header">
+    <h2>À propos</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Bonjour, je suis Ines Mathlouthi, future architecte à en devenir. Mon travail se situe à l'intersection de l'identité visuelle, de la photographie et de la direction artistique.</p>
+      <p>Je crois en des projets pensés avec intention où chaque choix porte un sens; c'est comme cela que je conceptualise. Dār, qui signifie « maison » en arabe, est l'espace que je me suis construit pour créer librement.</p>
+    </div>
+    <div class="about-info">
+      <div class="about-info-row">
+        <span class="about-info-label">Nom</span>
+        <span class="about-info-value">Ines Mathlouthi</span>
+      </div>
+      <div class="about-info-row">
+        <span class="about-info-label">Localisation</span>
+        <span class="about-info-value about-info-value--studio">Région PACA · Disponible également à Paris</span>
+      </div>
+      <div class="about-info-row">
+        <span class="about-info-label">Spécialité</span>
+        <span class="about-info-value">AutoCAD · Photoshop · InDesign · Lightroom · Revit (en cours d'approfondissement)</span>
+      </div>
+      <div class="about-info-row">
+        <span class="about-info-label">Disponibilité</span>
+        <span class="about-info-value">01/07/2026 au 31/08/2026</span>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<div id="section-contact" class="section">
+  <div class="section-header">
+    <h2>Contact</h2>
+  </div>
+  <div class="contact-wrap">
+    <p>Actuellement à la recherche d'un stage en agence d'architecture d'une durée de deux mois, je serais ravie de pouvoir échanger avec vous ou d'étudier toute opportunité ! :)</p>
+    <div class="contact-links">
+      <div class="contact-link"><span>Email</span><span>ines.mathlouthi@marseille.archi.fr</span></div>
+      <div class="contact-link"><span>Téléphone</span><span>06 18 41 ** **</span></div>
+      <div class="contact-link"><span>Autre</span><span>XXXXXXXXX</span></div>
+    </div>
+  </div>
+</div>
+ 
+<footer>
+  <span class="footer-copy">© 2022–2026 Dār Studio — Tous droits réservés</span>
+  <span class="footer-name">Dār Studio</span>
+</footer>
+ 
+<button class="back-top" id="backTop" onclick="scrollToTop()" aria-label="Retour en haut">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+ 
+<script src="script.js"></script>
+</body>
+</html>
