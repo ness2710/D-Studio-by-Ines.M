@@ -205,17 +205,20 @@
     <div class="crow"><span class="crow-l">Disponibilité</span><span class="crow-r">01/07 — 31/08/2026</span></div>
     <div class="crow"><span class="crow-l">Formation</span><span class="crow-r">DEEA — ENSA Marseille 2025 - Master en cours</span></div>
   </div>
-  <div class="contact-form">
+ <div class="contact-form">
   <div class="cf-title">Envoyez un message</div>
-  <div class="cf-row">
-    <input type="text" id="cf-name" placeholder="Votre nom" class="cf-input">
-    <input type="email" id="cf-email" placeholder="Votre email" class="cf-input">
-  </div>
-  <textarea id="cf-msg" class="cf-input cf-textarea" placeholder="Votre message..."></textarea>
-  <button class="cf-btn" onclick="sendMail()">
-    Envoyer
-    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-  </button>
+  <form id="cf-form" onsubmit="sendForm(event)">
+    <div class="cf-row">
+      <input type="text" name="name" placeholder="Votre nom" class="cf-input" required>
+      <input type="email" name="email" placeholder="Votre email" class="cf-input" required>
+    </div>
+    <textarea name="message" class="cf-input cf-textarea" placeholder="Votre message..." required></textarea>
+    <button type="submit" class="cf-btn">
+      Envoyer
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </button>
+  </form>
+  <div class="cf-confirm" id="cf-confirm">✓ Message envoyé avec succès !</div>
 </div>
   <div class="contact-giant">
     <span class="contact-giant-txt">INES MATHLOUTHI</span>

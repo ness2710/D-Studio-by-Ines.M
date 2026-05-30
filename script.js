@@ -182,3 +182,35 @@ document.querySelectorAll('.pg-full img, .pg-2 img, .pg-3 img').forEach(img => {
     document.body.style.overflow = 'hidden';
   });
 });
+
+async function sendForm(e) {
+  e.preventDefault();
+  const form = document.getElementById('cf-form');
+  const btn = form.querySelector('.cf-btn');
+  const confirm = document.getElementById('cf-confirm');
+
+  btn.textContent = 'Envoi...';
+  btn.style.opacity = '.5';
+
+  const data = new FormData(form);
+
+  try {
+    const res = await fetch('https://formspree.io/f/mpqnngoe', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      form.reset();
+      form.style.display = 'none';
+      confirm.classList.add('show');
+    } else {
+      btn.textContent = 'Erreur, réessayez';
+      btn.style.opacity = '1';
+    }
+  } catch {
+    btn.textContent = 'Erreur, réessayez';
+    btn.style.opacity = '1';
+  }
+}

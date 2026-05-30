@@ -464,12 +464,25 @@ nav a:hover,nav a.active{color:var(--fg);}
 .pg-2{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:3px;}
 
 .pg-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;}
-.pg-full img, .pg-2 img, .pg-3 img {
-  width:100%;object-fit:cover;display:block;
+.pg-full img{
+  width:100%;height:62vh;object-fit:cover;display:block;
   cursor:zoom-in;
-  filter:brightness(.75) saturate(.8);
-  transition:transform .7s cubic-bezier(.16,1,.3,1), filter .4s;
+  filter:brightness(.8) saturate(.85);
+  transition:transform .7s cubic-bezier(.16,1,.3,1),filter .4s;
 }
+.pg-2 img{
+  width:100%;height:44vh;object-fit:cover;display:block;
+  cursor:zoom-in;
+  filter:brightness(.8) saturate(.85);
+  transition:transform .7s cubic-bezier(.16,1,.3,1),filter .4s;
+}
+.pg-3 img{
+  width:100%;height:34vh;object-fit:cover;display:block;
+  cursor:zoom-in;
+  filter:brightness(.8) saturate(.85);
+  transition:transform .7s cubic-bezier(.16,1,.3,1),filter .4s;
+}
+
 .pg-full img:hover, .pg-2 img:hover, .pg-3 img:hover {
   transform:scale(1.02);
   filter:brightness(.95) saturate(1);
