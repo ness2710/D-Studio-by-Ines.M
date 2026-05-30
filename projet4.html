@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Centre communautaire,<br>Marseille — Dār Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Inter:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<canvas id="cvs"></canvas>
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<div class="proj-header">
+  <a class="logo-link" href="index.html"><em>Dār</em> Studio</a>
+  <a class="back-link" href="index.html">
+    <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Retour aux projets
+  </a>
+</div>
+
+<div class="proj-page-body">
+
+  <!-- HERO -->
+  <div class="proj-page-hero">
+    <img src="s4 projet.png" alt="Centre communautaire,<br>Marseille" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="proj-page-hero-ph"><span>Ajouter image principale</span></div>
+    <div class="proj-hero-over">
+      <div>
+        <div class="proj-hero-sem">Semestre 4 · ENSA Marseille · 2023 – 2024</div>
+        <h1>Centre communautaire,<br>Marseille</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-content">
+
+    <!-- META + TEXTE -->
+    <div class="proj-meta-row">
+      <div class="proj-meta-list">
+        <div class="pmi"><span class="pmi-l">Semestre</span><span class="pmi-v">4</span></div>
+        <div class="pmi"><span class="pmi-l">Lieu</span><span class="pmi-v">Marseille, France</span></div>
+        <div class="pmi"><span class="pmi-l">Année</span><span class="pmi-v">2023 – 2024</span></div>
+        <div class="pmi"><span class="pmi-l">Programme</span><span class="pmi-v">Équipement collectif · Espace public</span></div>
+        <div class="pmi"><span class="pmi-l">École</span><span class="pmi-v">ENSA Marseille – IMVT</span></div>
+      </div>
+      <div class="proj-text">
+        <h3>Présentation du projet</h3>
+        <p>Ce projet s'implante dans le 5e arrondissement de Marseille, à l'entrée du parc Longchamp. Il propose un équipement de proximité destiné aux habitants du quartier — un lieu de rencontre, d'échange et de pratique culturelle.</p>
+        <p>Le projet se compose de plusieurs volumes fragmentés reliés par des passerelles. Cette organisation permet de dégager un passage traversant qui devient un élément structurant, guidant progressivement vers le parc.</p>
+        <p>Le programme accueille des ateliers, des espaces d'exposition et un lieu de représentation, offrant une diversité d'usages au service du collectif.</p>
+      </div>
+    </div>
+
+    <!-- GALERIE -->
+    <div class="proj-gallery">
+      <h3>Visuels du projet</h3>
+      <div class="pg-full">
+        <img src="s4 projet.png" alt="Vue d'ensemble" onerror="this.style.opacity='.06'">
+      </div>
+      <div class="pg-2">
+        <img src="plan courant s4.png" alt="Plan / Coupe" onerror="this.style.opacity='.06'">
+        <img src="coupe bonne s4.png" alt="Vue intérieure" onerror="this.style.opacity='.06'">
+      </div>
+      <div class="pg-3">
+        <img src="photo maquette 1.png" alt="Maquette 1" onerror="this.style.opacity='.06'">
+        <img src="photo maquette 2.png" alt="Maquette 2" onerror="this.style.opacity='.06'">
+        <img src="photo maquette 3.png" alt="Maquette 3" onerror="this.style.opacity='.06'">
+      </div>
+    </div>
+
+    <!-- NAV BAS -->
+    <div class="proj-nav-bottom">
+      <a class="back-link" href="index.html">
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Retour aux projets
+      </a>
+      <span class="proj-nav-label">Semestre 4 / 10</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="fc">© 2022–2026 Dār Studio</span>
+  <div class="fb"><span>Dār Studio</span><span class="fb-ar">دار ستوديو</span></div>
+</footer>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

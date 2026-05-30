@@ -2,265 +2,235 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dār Studio — Ines Mathlouthi</title>
-  <link rel="icon" type="image/png" href="favicon_ds.png">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Quintessential&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>دار ستوديو — Ines Mathlouthi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Inter:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
- 
-<header>
-  <div class="header-left">
-    <span class="site-title" onclick="showSection('home')">Dār Studio</span>
-    <span class="site-subtitle">by Ines Mathlouthi</span>
+
+<canvas id="cvs"></canvas>
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button id="lb-close" onclick="closeLB()">×</button>
+  <button id="lb-prev" onclick="lbNav(-1)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+  <img id="lb-img" src="" alt="">
+  <button id="lb-next" onclick="lbNav(1)"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></button>
+</div>
+
+<!-- INTRO -->
+<div id="intro">
+  <div class="intro-ar">دار ستوديو</div>
+  <div class="intro-big">
+    <span>Dār</span><span>&nbsp;Stu</span><span>dio.</span>
   </div>
-  <nav>
-    <a onclick="showSection('projets')" id="nav-projets">Projets</a>
-    <a onclick="showSection('galerie')" id="nav-galerie">Galerie</a>
-    <a onclick="showSection('creations')" id="nav-creations">Créations</a>
-    <a onclick="showSection('experience')" id="nav-experience">Expérience</a>
-    <a onclick="showSection('apropos')" id="nav-apropos">À propos</a>
-    <a onclick="showSection('contact')" id="nav-contact">Contact</a>
+  <div class="intro-line"></div>
+</div>
+
+<!-- HEADER -->
+<header id="hdr">
+  <nav class="nav-left">
+    <a href="#" onclick="goPage('home')" id="n-home">Accueil</a>
+    <a href="#" onclick="goPage('galerie')" id="n-galerie">Galerie</a>
+  </nav>
+  <div class="nav-center">دار ستوديو</div>
+  <nav class="nav-right">
+    <a href="#" onclick="goPage('extra')" id="n-extra">Travaux extra</a>
+    <a href="#" onclick="goPage('contact')" id="n-contact">Contact</a>
   </nav>
 </header>
- 
-<div id="section-home" class="section active hero-section">
- 
-  <div class="hero-bg-image"></div>
- 
-  <div class="hero">
-    <p class="hero-label">Portfolio — 2026</p>
-    <h1 class="hero-title">
-      <span class="hero-title-inner">Portfolio</span>
-    </h1>
-    <p class="hero-intro">Bienvenue dans mon univers créatif. Je suis Ines Mathlouthi, étudiante en architecture et je vous présente "Dār Studio" —     mon portofolio numérique.</p>
-    <div class="hero-scroll">Défiler</div>
+
+<!-- ══ HOME ══ -->
+<div id="pg-home" class="page active">
+  <div class="home-ar-title">دار ستوديو — إينيس المثلوثي</div>
+  <div class="home-desc">
+    <p>Étudiante en architecture à l'ENSA Marseille. Mon travail explore la tension entre héritage méditerranéen, espace public et formes contemporaines.</p>
   </div>
+
+  <!-- Hero avec photo -->
+  <div class="home-hero">
+    <div class="home-hero-left">
+      <div class="home-giant">
+        <span class="home-giant-line" id="gl1">Mon</span>
+        <span class="home-giant-line" id="gl2">Port—</span>
+        <span class="home-giant-line" id="gl3">folio.</span>
+      </div>
+    </div>
+    <div class="home-hero-right">
+      <!-- Remplace photo.jpg par ta vraie photo -->
+      <img class="home-photo" src="selfie pp.jpg" alt="Ines Mathlouthi"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="home-photo-overlay"></div>
+      <div class="home-photo-label">Ines Mathlouthi — Etudiante en Architecture</div>
+    </div>
+  </div>
+
+  <!-- PROJETS -->
+  <div class="home-projects-section">
+    <div class="home-proj-label">Projets sélectionnés</div>
+    <div class="proj-layout">
+      <div class="proj-row">
+        <div class="pcard pcard-big reveal" onclick="window.location.href='projet2.html'">
+          <img src="kadikoy 1.png" alt="S4" onerror="this.style.display='none'">
+          <div class="pcard-ph"><svg viewBox="0 0 48 48"><rect x="4" y="4" width="40" height="40" stroke-dasharray="3 3"/></svg><span>Image</span></div>
+          <div class="pcard-over">
+            <div class="pcard-tag">Semestre 7 · Istanbul</div>
+            <div class="pcard-name">Centre culturel, Kadikoy</div>
+          </div>
+          <div class="pcard-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+        <div class="pcard pcard-sm reveal" onclick="window.location.href='projet4.html'">
+          <img src="photo maquette 2.png" alt="S5" onerror="this.style.display='none'">
+          <div class="pcard-ph"><svg viewBox="0 0 48 48"><rect x="4" y="4" width="40" height="40" stroke-dasharray="3 3"/></svg><span>Image</span></div>
+          <div class="pcard-over">
+            <div class="pcard-tag">Semestre 4 · Marseille</div>
+            <div class="pcard-name">Centre communautaire</div>
+          </div>
+          <div class="pcard-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+      </div>
+      <div class="proj-row proj-row-rev">
+        <div class="pcard pcard-big reveal" onclick="window.location.href='projet3.html'">
+          <img src="logement mars.png" alt="S7" onerror="this.style.display='none'">
+          <div class="pcard-ph"><svg viewBox="0 0 48 48"><rect x="4" y="4" width="40" height="40" stroke-dasharray="3 3"/></svg><span>Image</span></div>
+          <div class="pcard-over">
+            <div class="pcard-tag">Semestre 5 · Marseille</div>
+            <div class="pcard-name">Logement collectif</div>
+          </div>
+          <div class="pcard-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        </div>
+        <div class="pcard pcard-sm reveal" onclick="window.location.href='projet1.html'">
+               <img src="plan masse s8.png" alt="S5" onerror="this.style.display='none'">
+          <div class="pcard-ph"><svg viewBox="0 0 48 48"><rect x="4" y="4" width="40" height="40" stroke-dasharray="3 3"/></svg><span>Image</span></div>
+          <div class="pcard-over">
+            <div class="pcard-tag">Semestre 8 · Istanbul</div>
+            <div class="pcard-name">Ferme Urbaine</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span class="fc">© 2022–2026 Dār Studio</span>
+    <div class="fb"><span>Dār Studio</span><span class="fb-ar">دار ستوديو</span></div>
+  </footer>
 </div>
- 
-<div id="section-projets" class="section">
-  <div class="section-header">
-    <h2>Projets</h2>
-    <p>Sélection de travaux — 2022–2026</p>
+
+<!-- ══ GALERIE ══ -->
+<div id="pg-galerie" class="page">
+  <div class="gal-top">
+    <h2>Gal<em>erie.</em></h2>
+    <div class="gal-top-sub">Photographies & visuels — 2021–2026</div>
   </div>
-  <div class="projects-grid">
-    <div class="project-card" onclick="window.location.href='projet1.html'">
-       <img src="s4 projet.png" class="project-bg">
-       <div class="overlay">
-        <div class="project-card-label">semestre 4</div>
-        <div class="project-card-title">Centre communautaire, Marseille</div>
-      </div>
-    </div>
-    <div class="project-card">
-      <img src="logement mars.png" class="project-bg">
-      <div class="overlay">
-        <div class="project-card-label">semestre 5</div>
-        <div class="project-card-title">Logement collectif, Marseille</div>
-      </div>
-    </div>
-    <div class="project-card">
-      <img src="kadikoy 1.png" class="project-bg">
-      <div class="overlay">
-        <div class="project-card-label">semestre 7</div>
-        <div class="project-card-title">Centre culturel, Kadikoy</div>
-      </div>
-    </div>
-    <div class="project-card">
-      <div>
-        <div class="project-card-label">semestre 8</div>
-        <div class="project-card-title">à venir</div>
-      </div>
-    </div>
-    <div class="project-card">
-      <div>
-        <div class="project-card-label">semestre 9</div>
-        <div class="project-card-title">à venir</div>
-      </div>
-    </div>
-    <div class="project-card">
-      <div>
-        <div class="project-card-label">semestre 10</div>
-        <div class="project-card-title">à venir</div>
-      </div>
-    </div>
-    <div class="project-card"></div>
-    <div class="project-card"></div>
-    <div class="project-card"></div>
+  <div class="gal-filters">
+    <button class="gfbtn active" data-cat="all" onclick="filterGal('all')">Tout</button>
+    <button class="gfbtn" data-cat="patrimoine" onclick="filterGal('patrimoine')">Patrimoine</button>
+    <button class="gfbtn" data-cat="contemporain" onclick="filterGal('contemporain')">Contemporain</button>
+    <button class="gfbtn" data-cat="voyage" onclick="filterGal('voyage')">Voyage</button>
   </div>
+  <div class="gal-grid" id="galGrid">
+    <div class="gitem reveal" data-cat="patrimoine" onclick="openLB(0)"><img src="kairouan.jpg" alt="Kairouan" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="patrimoine" onclick="openLB(1)"><img src="musée.jpg" alt="Musée" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="patrimoine" onclick="openLB(2)"><img src="mars.PNG" alt="Marseille" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="voyage" onclick="openLB(3)"><img src="hajji.jpg" alt="Hajj" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="voyage" onclick="openLB(4)"><img src="casa.JPG" alt="Casablanca" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="patrimoine" onclick="openLB(5)"><img src="jian.jpg" alt="Jiangsu" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="voyage" onclick="openLB(6)"><img src="amour.jpg" alt="Amour" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="patrimoine" onclick="openLB(7)"><img src="mecca.jpg" alt="La Mecque" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="patrimoine" onclick="openLB(8)"><img src="china.JPG" alt="Chine" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="contemporain" onclick="openLB(9)"><img src="shanghai.JPG" alt="Shanghai" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="contemporain" onclick="openLB(10)"><img src="zaha hadid.JPG" alt="Zaha Hadid" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="contemporain" onclick="openLB(11)"><img src="sancaklar.jpg" alt="Sancaklar" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="patrimoine" onclick="openLB(12)"><img src="citernes.JPG" alt="Citernes" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="contemporain" onclick="openLB(13)"><img src="cimetiere it.jpg" alt="Cimetière" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="voyage" onclick="openLB(14)"><img src="maroc.jpg" alt="Maroc" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+    <div class="gitem reveal" data-cat="contemporain" onclick="openLB(14)"><img src="momo.jpg" alt="Italy" onerror="this.style.opacity='.08'"><div class="gitem-over"><div class="gitem-zoom"><svg viewBox="0 0 24 24"><line x1="11" y1="5" x2="11" y2="19"/><line x1="5" y1="11" x2="19" y2="11"/></svg></div></div></div>
+  </div>
+  <footer>
+    <span class="fc">© 2022–2026 Dār Studio</span>
+    <div class="fb"><span>Dār Studio</span><span class="fb-ar">دار ستوديو</span></div>
+  </footer>
 </div>
- 
-<div id="section-galerie" class="section">
-  <div class="section-header">
-    <h2>Galerie</h2>
-    <p>Photographies & visuels</p>
+
+<!-- ══ TRAVAUX EXTRA ══ -->
+<div id="pg-extra" class="page">
+  <div class="xtop">
+    <h2>Travaux<br><em>extra.</em></h2>
+    <p>Créations expérimentales & compétences parallèles au cursus.</p>
   </div>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="kairouan.jpg"></div>
-    <div class="gallery-item"><img src="musée.jpg"></div>
-    <div class="gallery-item"><img src="mars.PNG"></div>
-    <div class="gallery-item"><img src="hajji.jpg"></div>
-    <div class="gallery-item"><img src="casa.JPG"></div>
-    <div class="gallery-item"><img src="jian.jpg"></div>
-    <div class="gallery-item"><img src="amour.jpg"></div>
-    <div class="gallery-item"><img src="mecca.jpg"></div>
-    <div class="gallery-item"><img src="china.JPG"></div>
-    <div class="gallery-item"><img src="shanghai.JPG"></div>
-    <div class="gallery-item"><img src="zaha hadid.JPG"></div>
-    <div class="gallery-item"><img src="sancaklar.jpg"></div>
-    <div class="gallery-item"><img src="citernes.JPG"></div>
-    <div class="gallery-item"><img src="cimetiere it.jpg"></div>
-    <div class="gallery-item"><img src="maroc.jpg"></div>
+  <div class="xlist">
+    <div class="xrow">
+      <div class="xrh" onclick="togX(this)"><span class="xnum">01</span><span class="xname">Fragments d'un quartier</span><span class="xtag">Film expérimental</span><span class="xplus">+</span></div>
+      <div class="xbody"><div class="xinner"><p>Le Panier, Marseille — S4, 2024. Court-métrage retraçant les transformations sociales, culturelles et architecturales d'un lieu emblématique de Marseille.</p><video controls src="video art longue.mov"></video></div></div>
+    </div>
+    <div class="xrow">
+      <div class="xrh" onclick="togX(this)"><span class="xnum">02</span><span class="xname">Un peu d'art</span><span class="xtag">Peinture acrylique</span><span class="xplus">+</span></div>
+      <div class="xbody"><div class="xinner"><p>Portrait du docteur Félinet, 2021. Inspiré du Portrait du docteur Gachet de Van Gogh. Exploration de la touche impressionniste appliquée à un sujet contemporain.</p><img src="peinture.jpg" onerror="this.style.opacity='.05'"></div></div>
+    </div>
+    <div class="xrow">
+      <div class="xrh" onclick="togX(this)"><span class="xnum">03</span><span class="xname">Compositions visuelles</span><span class="xtag">Collages numériques</span><span class="xplus">+</span></div>
+      <div class="xbody"><div class="xinner"><p>Recherches graphiques et superpositions d'images autour des thèmes de l'espace, du lieu et de la mémoire urbaine.</p><img src="collage.png" onerror="this.style.opacity='.05'"></div></div>
+    </div>
+    <div class="xrow">
+      <div class="xrh" onclick="togX(this)"><span class="xnum">04</span><span class="xname">Mosaïques ottomanes</span><span class="xtag">Patrimoine</span><span class="xplus">+</span></div>
+      <div class="xbody"><div class="xinner"><p>Exploration des motifs et géométries ottomanes. Étude des structures répétitives de l'art islamique. En cours.</p><img src="carreau fini.jpg" onerror="this.style.opacity='.05'"></div></div>
+    </div>
+    <div class="xrow">
+      <div class="xrh" onclick="togX(this)"><span class="xnum">05</span><span class="xname">Artisanat textile</span><span class="xtag">Tapis & motifs</span><span class="xplus">+</span></div>
+      <div class="xbody"><div class="xinner"><p>Travail sur les textures, tapis et motifs textiles. Réinterprétation contemporaine des savoir-faire. En cours.</p><img src="bon gtapis.JPG" onerror="this.style.opacity='.05'"></div></div>
+    </div>
   </div>
+  <footer>
+    <span class="fc">© 2022–2026 Dār Studio</span>
+    <div class="fb"><span>Dār Studio</span><span class="fb-ar">دار ستوديو</span></div>
+  </footer>
 </div>
- 
-<div id="section-creations" class="section">
-  <div class="section-header">
-    <h2>Créations</h2>
-    <p>Travaux expérimentaux & compétences extra</p>
+
+<!-- ══ CONTACT ══ -->
+<div id="pg-contact" class="page">
+  <div class="ctop">
+    <h2>Travaillons<br><em>ensemble.</em></h2>
+    <p>À la recherche d'un stage en agence d'architecture pour l'été 2026</p>
+    <p>(2 mois). Disponible en région PACA et à Paris.</p>
   </div>
-  <div class="creations-list">
-    <div class="creation-item" onclick="toggleCreation('c1')">
-      <span class="creation-num">01</span>
-      <span class="creation-title">Fragments d'un quartier</span>
-      <span class="creation-tag">Film expérimental</span>
-    </div>
-    <div id="c1" class="creation-content">
-      <p>Le film : Le Panier, Marseille
-semestre 4 - 2024
-Dans le cadre d’un projet en arts plastiques, nous avons réalisé un
-court-métrage retraçant l’histoire du quartier du Panier à
-Marseille, en explorant comment les espaces urbains ont été occupés
-à travers les époques. Ce travail illustre les transformations sociales,
-culturelles et architecturales d’un lieu emblématique, en mettant
-l’accent sur la relation entre une personne et son environnement.</p>
-      
-      <video controls src="video art longue 24.mp4"></video>
-    </div>
-    <div class="creation-item" onclick="toggleCreation('c2')">
-      <span class="creation-num">02</span>
-      <span class="creation-title">Un peu d'art</span>
-      <span class="creation-tag">Peinture</span>
-    </div>
-    <div id="c2" class="creation-content">
-      <p>Portrait du docteur Félinet, 2021. Inspiré du Portrait du docteur Gachet, Van Gogh - peinture acrylique.</p>
-      <img src="peinture.jpg">
-    </div>
-    <div class="creation-item" onclick="toggleCreation('c3')">
-      <span class="creation-num">03</span>
-      <span class="creation-title">Compositions visuelles</span>
-      <span class="creation-tag">Collages numériques</span>
-    </div>
-    <div id="c3" class="creation-content">
-      <p>Collages numériques et recherches graphiques.</p>
-      <img src="collage.png">
-    </div>
-    <div class="creation-item" onclick="toggleCreation('c4')">
-      <span class="creation-num">04</span>
-      <span class="creation-title">Savoir-faire d'ailleurs</span>
-      <span class="creation-tag">Mosaïques ottomanes</span>
-    </div>
-    <div id="c4" class="creation-content">
-      <p>Exploration des motifs et de l'ornementation ottomane. (EN COURS)</p>
-      <img src="mosaique.jpg">
-    </div>
-    <div class="creation-item" onclick="toggleCreation('c5')">
-      <span class="creation-num">05</span>
-      <span class="creation-title">Artisanat textile</span>
-      <span class="creation-tag">Tapis et motifs</span>
-    </div>
-    <div id="c5" class="creation-content">
-      <p>Travail autour des textures, tapis et motifs textiles. (EN COURS)</p>
-      <img src="tapis.jpg">
-    </div>
+  <div class="crows">
+    <div class="crow"><span class="crow-l">Email</span><span class="crow-r">ines.mathlouthi@marseille.archi.fr</span></div>
+    <div class="crow"><span class="crow-l">Téléphone</span><span class="crow-r">06 18 41 ** **</span></div>
+    <div class="crow"><span class="crow-l">Localisation</span><span class="crow-r">Région PACA · Disponible à Paris</span></div>
+    <div class="crow"><span class="crow-l">Disponibilité</span><span class="crow-r">01/07 — 31/08/2026</span></div>
+    <div class="crow"><span class="crow-l">Formation</span><span class="crow-r">DEEA — ENSA Marseille 2025 - Master en cours</span></div>
   </div>
+  <div class="contact-form">
+  <div class="cf-title">Envoyez un message</div>
+  <div class="cf-row">
+    <input type="text" id="cf-name" placeholder="Votre nom" class="cf-input">
+    <input type="email" id="cf-email" placeholder="Votre email" class="cf-input">
+  </div>
+  <textarea id="cf-msg" class="cf-input cf-textarea" placeholder="Votre message..."></textarea>
+  <button class="cf-btn" onclick="sendMail()">
+    Envoyer
+    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </button>
 </div>
- 
-<div id="section-experience" class="section">
-  <div class="section-header">
-    <h2>Expérience</h2>
-    <p>Parcours professionnel</p>
+  <div class="contact-giant">
+    <span class="contact-giant-txt">INES MATHLOUTHI</span>
+    <span class="contact-giant-txt" style="font-style:italic;">Architecture.</span>
   </div>
-  <div class="exp-list">
-    <div class="exp-item">
-      <span class="exp-date">2024</span>
-      <div>
-        <div class="exp-role">Stagiaire Assistante Architecte</div>
-        <div class="exp-company">MZ Architecture</div>
-      </div>
-    </div>
-    <div class="exp-item">
-      <span class="exp-date">2022</span>
-      <div>
-        <div class="exp-role">Stage ouvrier en Restauration de Patrimoine</div>
-        <div class="exp-company">Les Compagnons de Castellane</div>
-      </div>
-    </div>
-    <div class="exp-item">
-      <span class="exp-date">2021 — présent</span>
-      <div>
-        <div class="exp-role">Formation / Diplôme</div>
-        <div class="exp-company">ENSA Marseille - Institut Méditerranéen de la Ville et des Territoires (IMVT)</div>
-        <div class="exp-company">Diplôme d'Études en Architecture (DEEA) obtenu en 2025</div>
-      </div>
-    </div>
-  </div>
+  <footer>
+    <span class="fc">© 2022–2026 Dār Studio</span>
+    <div class="fb"><span>Dār Studio</span><span class="fb-ar">دار ستوديو</span></div>
+  </footer>
 </div>
- 
-<div id="section-apropos" class="section">
-  <div class="section-header">
-    <h2>À propos</h2>
-  </div>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>Bonjour, je suis Ines Mathlouthi, future architecte à en devenir. Mon travail se situe à l'intersection de l'identité visuelle, de la photographie et de la direction artistique.</p>
-      <p>Je crois en des projets pensés avec intention où chaque choix porte un sens; c'est comme cela que je conceptualise. Dār, qui signifie « maison » en arabe, est l'espace que je me suis construit pour créer librement.</p>
-    </div>
-    <div class="about-info">
-      <div class="about-info-row">
-        <span class="about-info-label">Nom</span>
-        <span class="about-info-value">Ines Mathlouthi</span>
-      </div>
-      <div class="about-info-row">
-        <span class="about-info-label">Localisation</span>
-        <span class="about-info-value about-info-value--studio">Région PACA · Disponible également à Paris</span>
-      </div>
-      <div class="about-info-row">
-        <span class="about-info-label">Spécialité</span>
-        <span class="about-info-value">AutoCAD · Photoshop · InDesign · Lightroom · Revit (en cours d'approfondissement)</span>
-      </div>
-      <div class="about-info-row">
-        <span class="about-info-label">Disponibilité</span>
-        <span class="about-info-value">01/07/2026 au 31/08/2026</span>
-      </div>
-    </div>
-  </div>
-</div>
- 
-<div id="section-contact" class="section">
-  <div class="section-header">
-    <h2>Contact</h2>
-  </div>
-  <div class="contact-wrap">
-    <p>Actuellement à la recherche d'un stage en agence d'architecture d'une durée de deux mois, je serais ravie de pouvoir échanger avec vous ou d'étudier toute opportunité ! :)</p>
-    <div class="contact-links">
-      <div class="contact-link"><span>Email</span><span>ines.mathlouthi@marseille.archi.fr</span></div>
-      <div class="contact-link"><span>Téléphone</span><span>06 18 41 ** **</span></div>
-      <div class="contact-link"><span>Autre</span><span>XXXXXXXXX</span></div>
-    </div>
-  </div>
-</div>
- 
-<footer>
-  <span class="footer-copy">© 2022–2026 Dār Studio — Tous droits réservés</span>
-  <span class="footer-name">Dār Studio</span>
-</footer>
- 
-<button class="back-top" id="backTop" onclick="scrollToTop()" aria-label="Retour en haut">
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">
   <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
- 
+
 <script src="script.js"></script>
 </body>
 </html>
